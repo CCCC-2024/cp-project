@@ -23,3 +23,6 @@ venv/
 # local only, not submitted
 labhome1/
 .vscode/
+lab_project/data/aligned/
+lab_project/data/raw/**/*.HEIC
+lab_project/data/raw/**/*.heic
