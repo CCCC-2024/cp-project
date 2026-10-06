@@ -1,0 +1,69 @@
+Part A - EPI Observations
+==========================
+
+Scene setup:
+- Objects: [orange bottle (near), yellow bottle (middle), red/purple box (far)]
+- Camera motion: horizontal translation, ~[X] cm, viewing direction held fixed
+- Video: [file name], [N] frames
+
+0. Choice of `mid`
+-------------------
+The video frame is 1440 (width) x 1080 (height), so the true geometric
+midpoint is row=540 for the horizontal EPI and column=720 for the
+perpendicular EPI. We generated these first (see
+output/midpoint_exploration/) and then tried other locations, as suggested
+by the assignment ("Try different locations of mid"):
+
+- row=540 (true midpoint): shows all three objects, but the row also passes
+  through a projection screen in the background whose changing content adds
+  distracting vertical streaks unrelated to the camera motion we care about.
+- column=720 (true midpoint): only captures the two nearest objects. The
+  farthest object never crosses this column during the camera's sideways
+  sweep, so it is completely absent from this EPI.
+
+Because of this, we moved to row=720 (still comfortably away from the
+screen and ceiling clutter, but low enough to only cross the three
+foreground objects) and column=1080 (far enough right that all three
+objects sweep across it as the camera translates). These are the two EPI
+images submitted as the final horizontal/perpendicular pair.
+
+1. Horizontal EPI vs. perpendicular EPI
+----------------------------------------
+The horizontal EPI (row y=720) shows three clearly slanted color bands, one
+per object. Because the camera translates parallel to the image plane, each
+object's image-plane x-position changes roughly linearly with time, so a
+fixed row stacked over time produces a straight, slanted trajectory per
+object. The near object (orange bottle) produces the steepest slope because
+it has the largest image displacement per unit camera motion (largest
+disparity / closest to the camera); the far object (box) produces the
+shallowest slope.
+
+The perpendicular EPI (column x=1080) looks qualitatively different: instead
+of clean diagonal bands across the whole image, it shows each object
+appearing and disappearing as it sweeps past that fixed column over time.
+This is expected because the fixed column is perpendicular to the direction
+of camera motion, so it does not directly encode the same left-right
+parallax structure that the horizontal slice does.
+
+2. Effect of changing the row/column (`mid`)
+---------------------------------------------
+Moving the horizontal slice up/down changes which objects intersect that
+row (e.g., a row through the tops of the bottles only shows those two
+objects, not the box behind them). Moving the perpendicular slice left/right
+changes which objects sweep through that column and at what point in time
+they cross it. This confirms that an EPI only reveals the objects that
+intersect the chosen scanline.
+
+3. Fixed image-coordinate patch
+----------------------------------
+After painting a rectangular patch at a fixed (y0:y1, x0:x1) image
+region on every frame, playing back the video makes the patch look like a
+HUD overlay glued to the screen rather than an object in the scene: real
+objects behind it appear to slide underneath it as the camera moves.
+
+In the EPI, the patch produces a constant, non-slanted band that spans the
+full time axis at the same x (or y) location in every frame, in contrast to
+the slanted trajectories of real scene points. This is exactly the expected
+result: the patch has no depth and does not move in image coordinates as the
+camera translates, so it exhibits zero parallax, while every real 3D point
+in the scene exhibits parallax proportional to its inverse depth.

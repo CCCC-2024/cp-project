@@ -1,0 +1,232 @@
+{
+  "selected": "s3.0_l0.05_h0.2",
+  "selection_type": "qualitative visual assessment; no depth ground truth",
+  "criteria": [
+    "foreground silhouette continuity",
+    "occlusion and connecting-boundary retention",
+    "wood-grain rejection",
+    "tabletop/shadow artifacts"
+  ],
+  "registered_candidates": [
+    {
+      "name": "s1.2_l0.03_h0.12",
+      "sigma": 1.2,
+      "low": 0.03,
+      "high": 0.12,
+      "min_component": 35,
+      "edge_fraction": 0.13365833333333332
+    },
+    {
+      "name": "s1.2_l0.05_h0.2",
+      "sigma": 1.2,
+      "low": 0.05,
+      "high": 0.2,
+      "min_component": 35,
+      "edge_fraction": 0.07604739583333334
+    },
+    {
+      "name": "s1.2_l0.08_h0.25",
+      "sigma": 1.2,
+      "low": 0.08,
+      "high": 0.25,
+      "min_component": 35,
+      "edge_fraction": 0.03495104166666667
+    },
+    {
+      "name": "s1.2_l0.12_h0.3",
+      "sigma": 1.2,
+      "low": 0.12,
+      "high": 0.3,
+      "min_component": 35,
+      "edge_fraction": 0.0160078125
+    },
+    {
+      "name": "s1.2_l0.15_h0.4",
+      "sigma": 1.2,
+      "low": 0.15,
+      "high": 0.4,
+      "min_component": 35,
+      "edge_fraction": 0.011119791666666667
+    },
+    {
+      "name": "s1.2_l0.2_h0.5",
+      "sigma": 1.2,
+      "low": 0.2,
+      "high": 0.5,
+      "min_component": 35,
+      "edge_fraction": 0.008308854166666668
+    },
+    {
+      "name": "s2.0_l0.03_h0.12",
+      "sigma": 2.0,
+      "low": 0.03,
+      "high": 0.12,
+      "min_component": 35,
+      "edge_fraction": 0.03975416666666667
+    },
+    {
+      "name": "s2.0_l0.05_h0.2",
+      "sigma": 2.0,
+      "low": 0.05,
+      "high": 0.2,
+      "min_component": 35,
+      "edge_fraction": 0.016425520833333332
+    },
+    {
+      "name": "s2.0_l0.08_h0.25",
+      "sigma": 2.0,
+      "low": 0.08,
+      "high": 0.25,
+      "min_component": 35,
+      "edge_fraction": 0.010650520833333333
+    },
+    {
+      "name": "s2.0_l0.12_h0.3",
+      "sigma": 2.0,
+      "low": 0.12,
+      "high": 0.3,
+      "min_component": 35,
+      "edge_fraction": 0.008224479166666666
+    },
+    {
+      "name": "s2.0_l0.15_h0.4",
+      "sigma": 2.0,
+      "low": 0.15,
+      "high": 0.4,
+      "min_component": 35,
+      "edge_fraction": 0.007180208333333334
+    },
+    {
+      "name": "s2.0_l0.2_h0.5",
+      "sigma": 2.0,
+      "low": 0.2,
+      "high": 0.5,
+      "min_component": 35,
+      "edge_fraction": 0.005994270833333333
+    },
+    {
+      "name": "s3.0_l0.03_h0.12",
+      "sigma": 3.0,
+      "low": 0.03,
+      "high": 0.12,
+      "min_component": 35,
+      "edge_fraction": 0.014466666666666666
+    },
+    {
+      "name": "s3.0_l0.05_h0.2",
+      "sigma": 3.0,
+      "low": 0.05,
+      "high": 0.2,
+      "min_component": 35,
+      "edge_fraction": 0.009727083333333334
+    },
+    {
+      "name": "s3.0_l0.08_h0.25",
+      "sigma": 3.0,
+      "low": 0.08,
+      "high": 0.25,
+      "min_component": 35,
+      "edge_fraction": 0.007791666666666666
+    },
+    {
+      "name": "s3.0_l0.12_h0.3",
+      "sigma": 3.0,
+      "low": 0.12,
+      "high": 0.3,
+      "min_component": 35,
+      "edge_fraction": 0.006453125
+    },
+    {
+      "name": "s3.0_l0.15_h0.4",
+      "sigma": 3.0,
+      "low": 0.15,
+      "high": 0.4,
+      "min_component": 35,
+      "edge_fraction": 0.004869270833333333
+    },
+    {
+      "name": "s3.0_l0.2_h0.5",
+      "sigma": 3.0,
+      "low": 0.2,
+      "high": 0.5,
+      "min_component": 35,
+      "edge_fraction": 0.0036052083333333335
+    },
+    {
+      "name": "s4.0_l0.03_h0.12",
+      "sigma": 4.0,
+      "low": 0.03,
+      "high": 0.12,
+      "min_component": 35,
+      "edge_fraction": 0.010967708333333333
+    },
+    {
+      "name": "s4.0_l0.05_h0.2",
+      "sigma": 4.0,
+      "low": 0.05,
+      "high": 0.2,
+      "min_component": 35,
+      "edge_fraction": 0.0074390625
+    },
+    {
+      "name": "s4.0_l0.08_h0.25",
+      "sigma": 4.0,
+      "low": 0.08,
+      "high": 0.25,
+      "min_component": 35,
+      "edge_fraction": 0.006127604166666667
+    },
+    {
+      "name": "s4.0_l0.12_h0.3",
+      "sigma": 4.0,
+      "low": 0.12,
+      "high": 0.3,
+      "min_component": 35,
+      "edge_fraction": 0.004906770833333333
+    },
+    {
+      "name": "s4.0_l0.15_h0.4",
+      "sigma": 4.0,
+      "low": 0.15,
+      "high": 0.4,
+      "min_component": 35,
+      "edge_fraction": 0.003538020833333333
+    },
+    {
+      "name": "s4.0_l0.2_h0.5",
+      "sigma": 4.0,
+      "low": 0.2,
+      "high": 0.5,
+      "min_component": 35,
+      "edge_fraction": 0.001728125
+    }
+  ],
+  "additional_support_filter_candidates": {
+    "count": 6,
+    "sigma": [
+      2.0,
+      3.0
+    ],
+    "radii_px": [
+      2,
+      4,
+      6
+    ],
+    "low": 0.035,
+    "high": 0.15,
+    "min_component": 20,
+    "result": "rejected: additional contour fragmentation"
+  },
+  "observations": {
+    "previous": "Leftmost upper contour has a large gap; right upper wooden face contains short texture fragments.",
+    "selected": "More of the left upper contour and central connections survives; most right upper-face texture is suppressed.",
+    "sigma4_low.03_high.12": "More smoothing removes some weaker contour sections and changes small corner details.",
+    "high_threshold_candidates": "Cleaner backgrounds but more missing silhouette and connection segments.",
+    "low_sigma_low_threshold_candidates": "More wood-grain and tabletop texture leakage."
+  },
+  "limitations": [
+    "Some cast-shadow responses are displaced from the true boundary.",
+    "A few outer contours remain incomplete.",
+    "Selection does not establish global optimality or measured accuracy."
+  ]
+}

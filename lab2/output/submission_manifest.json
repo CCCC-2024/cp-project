@@ -1,0 +1,38 @@
+[
+  {
+    "file": "1_depth_edges.png",
+    "sha256": "4dd8ec603585fcb8179d31a8bec031da49a7f40891221e9ae211eb1c6f467a0a",
+    "bytes": 2582270,
+    "dimensions": [
+      3320,
+      1520
+    ]
+  },
+  {
+    "file": "2_ai_depth_edges.png",
+    "sha256": "18ca65c64801a0db0c1ff90f89d15292f10b2e647ed30d4ac5994673a526840d",
+    "bytes": 3306479,
+    "dimensions": [
+      3320,
+      1520
+    ]
+  },
+  {
+    "file": "3_reconstruction_depth_edges.png",
+    "sha256": "3813afbb4416a2e141fd21cba474b134d0e59158d18c471e7863775bd9b731c0",
+    "bytes": 2491410,
+    "dimensions": [
+      3320,
+      1520
+    ]
+  },
+  {
+    "file": "4_reconstruction_all_edges.png",
+    "sha256": "028d1bda43b8f9a5aaab455c8ac8bd2fed4a8ca4cb5917a39cb45744f0964ce1",
+    "bytes": 2714324,
+    "dimensions": [
+      3320,
+      1520
+    ]
+  }
+]

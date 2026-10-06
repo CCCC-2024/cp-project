@@ -1,0 +1,124 @@
+{
+  "date": "2026-09-10",
+  "tool": "built-in image_gen",
+  "ai_depth": {
+    "input": "output/original_scene.png",
+    "output": "output/ai/depth_edges.png",
+    "prompt": "Use case: scientific-educational. Asset type: inferred depth-discontinuity edge image for a computational photography lab. Input image 1 is the sole RGB reference, not a style reference. Infer the 3D scene from that image and return ONLY its depth edges as a clean white-line-on-pure-black image in the same 4:3 landscape composition. Preserve the exact image positions, perspective, outline, connected configuration and occlusions of the tan articulated wooden geometric puzzle on the dark tabletop. Retain true silhouette and occlusion boundaries and clear separations between adjoining blocks; omit wood grain, tabletop speckles, lighting boundaries, cast shadows, color-only changes and projected text. A crease on a continuous surface is not a depth discontinuity: avoid adding decorative internal diagonals. Keep sparse necessary background depth boundaries only if inferable. Do not draw hidden edges or invent blocks. Thin continuous white contours (roughly 2-3 pixels at 1536x1152), black elsewhere. No RGB photo, no grayscale depth shading, no side-by-side composition, no labels, no text, no border. This is AI-inferred depth edges, not a claim of measured ground truth. Output a PNG image.",
+    "input_sha256": "ab98b99ab14fd59cc8b5519bdb491de726e1e79c07acced765572402e1d5312d",
+    "output_sha256": "9558905b745cce6f4e82e3688a9e2314f03ad3a0028748dc259dc5e6717b0b84",
+    "generated_source": "/Users/nealjiang/.codex/generated_images/01a08c13-299b-7d82-b822-aa438ee46327/exec-b26bc089-9755-4fa2-9e64-f1b0873e89aa.png"
+  },
+  "reconstruction_depth": {
+    "input": "output/ai/reconstruction_depth_input.png",
+    "output": "output/ai/reconstruction_depth_edges.png",
+    "prompt": "Use case: sketch-to-render. Asset type: photorealistic RGB scene reconstruction from an edge image for a computational photography experiment. The attached black-and-white edge map is the ONLY visual input. Infer and reconstruct a plausible original photograph from it. Use white lines as boundary evidence, not literal white paint or outlines. Preserve the attached image's framing, perspective, object positions, visible shape layout, relative scale and occlusions as faithfully as the evidence permits. Do not rearrange or redesign the objects. Reconstruct surfaces and lighting plausibly where edges are missing; do not force an idealized symmetric or polished shape. Color/material hints (identical in both trials): foreground blocks are natural tan/brown wood; the supporting tabletop is dark charcoal gray; distant walls are pale beige, a distant projection screen is blue, and ceiling lights are warm white. Use the edge image, not these hints, to determine geometry and texture layout. Return a single natural indoor photograph in 4:3 landscape composition, with ordinary classroom lighting and realistic material textures. No drawn outlines, no text, no labels, no collage, no split screen, no borders. Do not consult an earlier RGB photograph or another reconstruction. This is an AI reconstruction with uncertainty, not measured recovery of the original. Output PNG.",
+    "input_sha256": "35e0d00487cc37f1a1e6f37494eed5dab5f6e3e2b692193ea0d864553b73538c",
+    "output_sha256": "b965fa21e21699202a945529bd58554df9fcfdeafc148ff68066c0167ed6c1fd",
+    "generated_source": "/Users/nealjiang/.codex/generated_images/01a08c13-299b-7d82-b822-aa438ee46327/exec-f080d461-5c08-4b3e-865b-21884291b6c9.png",
+    "edge_processing": {
+      "inputs": {
+        "left": "Lab own/lab2/images/IMG_2082_left.jpg",
+        "right": "Lab own/lab2/images/IMG_2084_right.jpg",
+        "top": "Lab own/lab2/images/IMG_2083_top.jpg",
+        "bottom": "Lab own/lab2/images/IMG_2086_bottom.jpg"
+      },
+      "mode": "registered_refined",
+      "size": [
+        1600,
+        1200
+      ],
+      "sigma": 1.2,
+      "low_threshold": 0.2,
+      "min_component": 25,
+      "registration": [
+        {
+          "direction": "left",
+          "reference": true
+        },
+        {
+          "direction": "right",
+          "matches": 1647,
+          "inliers": 1616,
+          "median_error_px": 0.20173023641109467,
+          "homography": [
+            [
+              0.9982971235181538,
+              -0.0042689915554465115,
+              -5.2425535494266144
+            ],
+            [
+              -0.0016668825106322508,
+              0.9906247425308503,
+              -9.208727944292459
+            ],
+            [
+              2.7697626580857934e-06,
+              -9.651595743446422e-06,
+              1.0
+            ]
+          ]
+        },
+        {
+          "direction": "top",
+          "matches": 1996,
+          "inliers": 1976,
+          "median_error_px": 0.16346287727355957,
+          "homography": [
+            [
+              0.9960719357015515,
+              0.0032036185659935117,
+              4.546340507496309
+            ],
+            [
+              -0.0008149715659951767,
+              1.0007789009464318,
+              6.7652109167357555
+            ],
+            [
+              -2.5720704724531507e-06,
+              3.1636839077733106e-06,
+              1.0
+            ]
+          ]
+        },
+        {
+          "direction": "bottom",
+          "matches": 807,
+          "inliers": 791,
+          "median_error_px": 0.27693450450897217,
+          "homography": [
+            [
+              1.0083873994036003,
+              0.0004943694736140212,
+              -16.906482042467164
+            ],
+            [
+              -0.001307793974743305,
+              1.0029904681558386,
+              1.7784631137005193
+            ],
+            [
+              5.827777699576075e-06,
+              -3.6904668850173673e-06,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "high_threshold": 0.5,
+      "edge_pixel_fraction": 0.0086734375
+    },
+    "note": "This is the exact earlier edge candidate used in the saved reconstruction. Part 1 was subsequently reselected; Part 3 retains its actual input and reconstruction."
+  },
+  "reconstruction_all": {
+    "input": "output/code/all_edges.png",
+    "output": "output/ai/reconstruction_all_edges.png",
+    "prompt": "Use case: sketch-to-render. Asset type: photorealistic RGB scene reconstruction from an edge image for a computational photography experiment. The attached black-and-white edge map is the ONLY visual input. Infer and reconstruct a plausible original photograph from it. Use white lines as boundary evidence, not literal white paint or outlines. Preserve the attached image's framing, perspective, object positions, visible shape layout, relative scale and occlusions as faithfully as the evidence permits. Do not rearrange or redesign the objects. Reconstruct surfaces and lighting plausibly where edges are missing; do not force an idealized symmetric or polished shape. Color/material hints (identical in both trials): foreground blocks are natural tan/brown wood; the supporting tabletop is dark charcoal gray; distant walls are pale beige, a distant projection screen is blue, and ceiling lights are warm white. Use the edge image, not these hints, to determine geometry and texture layout. Return a single natural indoor photograph in 4:3 landscape composition, with ordinary classroom lighting and realistic material textures. No drawn outlines, no text, no labels, no collage, no split screen, no borders. Do not consult an earlier RGB photograph or another reconstruction. This is an AI reconstruction with uncertainty, not measured recovery of the original. Output PNG.",
+    "input_sha256": "7880a74c5bb3278e3700f19c13248705e31e39145db87e0467d4d9e3a1d75297",
+    "output_sha256": "6a68d644b450f521e868e561b906f253a201620fb363ec74e7683627cec4e2f5",
+    "generated_source": "/Users/nealjiang/.codex/generated_images/01a08c13-299b-7d82-b822-aa438ee46327/exec-405aab3a-ff40-4eff-b140-ca84ec6d3d96.png"
+  },
+  "protocol": "Depth and ALL edge maps were computed in Python. Each reconstruction call supplied only its corresponding edge file through referenced_image_paths. Both reconstruction calls used exactly the same prompt and color/material hints; neither call supplied the RGB photograph or the other reconstruction. The AI-inferred edge image for part 2 was not used in these reconstruction calls.",
+  "limitations": "Generative reconstruction, not ground truth. Same-session tool calls with explicitly restricted reference files; no claim of independently audited model-context isolation. A single selected reconstruction per edge type."
+}

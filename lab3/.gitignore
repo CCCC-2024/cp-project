@@ -1,0 +1,7 @@
+*.mp4
+*.mov
+*.MOV
+partB_colmap/output/database.db
+partB_colmap/output/sparse/
+__pycache__/
+.DS_Store

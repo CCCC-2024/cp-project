@@ -1,0 +1,24 @@
+# system / cache
+.DS_Store
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# videos
+*.mp4
+*.MOV
+*.mov
+*.avi
+*.mkv
+*.m4v
+
+# large / regenerable data
+*.npy
+*.npz
+*.db
+*.bin
+*.zip
+
+# local only, not submitted
+labhome1/
