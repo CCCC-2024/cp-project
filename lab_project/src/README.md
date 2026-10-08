@@ -1,10 +1,17 @@
-# src/ — planned modules (one file each, written by us)
+# src/ — modules
 
 | file | job |
 |---|---|
-| `capture_notes.md` | how each stack was shot (camera, tripod, focus steps, settings) |
-| `align.py` | register every frame to a reference (ECC / ORB+homography); compensate focus breathing (scale change between frames) |
-| `sharpness.py` | per-pixel / per-patch focus measure: Laplacian variance, Tenengrad (Sobel), modified Laplacian; Gaussian smoothing of the measure |
-| `fuse.py` | argmax over the stack -> focus map; hard selection vs. soft (weighted) blending; seam smoothing |
-| `experiments.py` | vary stack size N, patch size, focus measure; save outputs to `results/` |
-| `make_figures.py` | comparison panels for the report/slides |
+| `stack_io.py` | load a scene folder (JPG/PNG/HEIC) sorted by name, subsample N frames, save images |
+| `align.py` | ECC affine registration to a reference frame (affine absorbs focus-breathing scale) |
+| `sharpness.py` | focus measures: Laplacian, Tenengrad, modified Laplacian + Gaussian smoothing (`sigma` ~ patch size) |
+| `fuse.py` | argmax focus map, hard vs. soft blending, colorised focus map, `selective_dof` (stretch goal) |
+| `experiments.py` | baseline + ablations (N frames, measure, sigma, hard/soft) -> `results/` |
+| `make_figures.py` | near / mid / far crop comparison panel |
+| `capture_notes.md` | how each stack was shot + what failed |
+
+Run: `pip install -r requirements.txt`, put frames in `data/raw/scene01/01.jpg …`, then
+`python src/experiments.py scene01`.
+
+Status: first draft, only smoke-tested on a synthetic stack — not yet on real photos.
+Everything here must be understood (and tuned/rewritten) by the person presenting it.
