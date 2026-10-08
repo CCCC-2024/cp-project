@@ -37,18 +37,7 @@ python src/make_figures.py scene01 results/all_in_focus/scene01_baseline.png --c
 Tripod, everything manual and fixed (focus, aperture, ISO, shutter, WB); 8–12 frames near → far;
 file names keep order. Log every stack in `docs/capture_notes.md`, including what failed.
 
-## Timeline
-| by | goal |
-|---|---|
-| Oct 13 | read paper; first stack shot; baseline (Laplacian + argmax) working |
-| Oct 20 | alignment + soft blending |
-| Oct 27 | 3 scenes shot; ablations run |
-| Nov 10 | stretch goal |
-| Nov 17 | figures, report draft |
-| Nov 24 | polish, rehearse, submit |
-
 ## Roles
 Capture & data: · Alignment: · Sharpness / fusion: · Experiments & figures: · Report / slides:
 
-## Note
-The instructor penalizes "AI slop": write and understand the core code ourselves, shoot our own data.
+
