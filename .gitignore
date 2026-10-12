@@ -31,7 +31,8 @@ labhome1/canvas_comment.md
 lab_project/data/raw/**/*.HEIC
 lab_project/data/raw/**/*.heic
 
-# midterm: exam PDF, handwritten answer photos (name, UF ID, GPS), Notion
-# transcript snapshots and index, papers, experiment output, handoffs and
-# prompts. Local only; never push any of it.
-/midterm/
+# midterm: everything stays local (exam PDF, original photos with name/UF ID/GPS,
+# Notion snapshots, papers, handoffs, prompts) except handwritten/, which holds
+# EXIF-free copies of the answer pages with name and UF ID painted out.
+/midterm/*
+!/midterm/handwritten/
