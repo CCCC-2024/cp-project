@@ -31,24 +31,7 @@ labhome1/canvas_comment.md
 lab_project/data/raw/**/*.HEIC
 lab_project/data/raw/**/*.heic
 
-# midterm: local source snapshots, extracted text, and downloaded papers
-# Keep the source index and small experiment results in Git.
-/midterm/sources/notion/*
-!/midterm/sources/notion/index.md
-/midterm/sources/pdf-text/
-/midterm/sources/papers/
-
-# midterm: local conversation handoffs and prompts
-/midterm/handoff.md
-/midterm/*prompt*.md
-
-# midterm: exam PDF, handwritten answer photos (name, UF ID, GPS in EXIF)
-# and any scans/submission built from them. Never push these.
-/midterm/*.pdf
-/midterm/*.HEIC
-/midterm/*.heic
-/midterm/*.jpg
-/midterm/*.jpeg
-/midterm/*.png
-/midterm/scan/
-/midterm/submission/
+# midterm: exam PDF, handwritten answer photos (name, UF ID, GPS), Notion
+# transcript snapshots and index, papers, experiment output, handoffs and
+# prompts. Local only; never push any of it.
+/midterm/
