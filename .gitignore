@@ -21,7 +21,34 @@ venv/
 *.zip
 
 # local only, not submitted
-labhome1/
+# labhome1: public code + figures only.
+# The report (.tex/.pdf) carries name and UF ID; need.md is the
+# instructor's assignment text; canvas_comment.md is a Canvas note.
+labhome1/TakeHome01.*
+labhome1/need.md
+labhome1/canvas_comment.md
 .vscode/
 lab_project/data/raw/**/*.HEIC
 lab_project/data/raw/**/*.heic
+
+# midterm: local source snapshots, extracted text, and downloaded papers
+# Keep the source index and small experiment results in Git.
+/midterm/sources/notion/*
+!/midterm/sources/notion/index.md
+/midterm/sources/pdf-text/
+/midterm/sources/papers/
+
+# midterm: local conversation handoffs and prompts
+/midterm/handoff.md
+/midterm/*prompt*.md
+
+# midterm: exam PDF, handwritten answer photos (name, UF ID, GPS in EXIF)
+# and any scans/submission built from them. Never push these.
+/midterm/*.pdf
+/midterm/*.HEIC
+/midterm/*.heic
+/midterm/*.jpg
+/midterm/*.jpeg
+/midterm/*.png
+/midterm/scan/
+/midterm/submission/
